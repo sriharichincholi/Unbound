@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>UNBOUND: The Heretic's Relic</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;800&display=swap" rel="stylesheet" />
+<style>
+html,body,#root{margin:0;height:100%;background:#05070d;overflow:hidden;font-family:'Cinzel',Georgia,serif;color:#e8dcc0}
+button{font-family:inherit}
+.ui{position:fixed;inset:0;pointer-events:none;z-index:10}.ui *{pointer-events:auto}
+.hud *{pointer-events:none}.hud .btn{pointer-events:auto}
+.title{position:absolute;top:14%;width:100%;display:flex;justify-content:center;animation:slam .5s cubic-bezier(.2,2,.4,1) both,shake .6s .45s}
+.logo{width:min(72vw,700px);height:auto;filter:drop-shadow(0 0 26px rgba(120,170,255,.5)) drop-shadow(0 6px 0 rgba(58,13,20,.8));transition:width .8s}
+@keyframes slam{from{transform:scale(4);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes shake{0%,100%{transform:translate(0)}20%{transform:translate(-14px,8px)}40%{transform:translate(12px,-10px)}60%{transform:translate(-8px,6px)}80%{transform:translate(6px,-4px)}}
+.chain{position:absolute;top:0;width:14px;height:100%;background:repeating-linear-gradient(#555 0 16px,#222 16px 22px);animation:chain 1.6s 1.8s ease-out both}
+@keyframes chain{from{transform:translateY(-100%)}to{transform:translateY(-35%)}}
+.menu{position:absolute;left:8vw;top:52%;transform:translateY(-50%);display:flex;flex-direction:column;gap:6px;padding:24px 36px;background:rgba(30,38,52,.62);border:1px solid #5b4a2a;backdrop-filter:blur(6px)}
+.menu button,.btn{background:none;border:0;color:#d9cfb4;font-size:24px;text-align:left;padding:8px 18px;cursor:pointer;letter-spacing:.08em;transition:.15s}
+.menu button:hover,.btn:hover{color:#ffcf5a;text-shadow:0 0 12px #c1121f;transform:translateX(8px)}
+.menu button:disabled{opacity:.35;cursor:default}
+.panel{position:absolute;inset:8vh 8vw;background:rgba(18,22,32,.88);border:1px solid #5b4a2a;padding:28px;overflow:auto}
+.bar{position:relative;height:16px;background:#150d0d;border:2px solid #8a7240;box-shadow:0 0 0 2px #1a1209}
+.bar>i{position:absolute;inset:0;transform-origin:left}
+.slot{width:56px;height:56px;border:2px solid #8a7240;background:rgba(10,12,18,.8);position:relative;display:flex;align-items:center;justify-content:center;font-size:22px}
+.slot b{position:absolute;right:-6px;bottom:-8px;background:#8a7240;color:#000;font-size:12px;padding:1px 5px}
+.slot s{position:absolute;inset:0;background:rgba(0,0,0,.7);transform-origin:bottom}
+.toast{position:absolute;left:50%;bottom:6vh;transform:translateX(-50%);display:flex;gap:14px;align-items:center;min-width:min(70vw,420px);max-width:70vw;padding:10px 20px 10px 10px;background:rgba(10,12,18,.88);border:1px solid #8a7240;animation:fade .3s}
+@keyframes fade{from{opacity:0;transform:translate(-50%,10px)}}
+.avatar{width:64px;height:64px;border-radius:50%;border:2px solid #c9a95c;object-fit:cover;flex:none}
+.fade{transition:opacity 1.2s}
+.cap{position:absolute;left:50%;bottom:24vh;transform:translateX(-50%);font-style:italic;letter-spacing:.06em;font-size:20px;text-shadow:0 0 10px #000,0 0 4px #000;text-align:center;max-width:80vw}
+.sub{letter-spacing:.5em;font-size:min(2.4vw,22px);color:#cfd6e6;text-shadow:0 0 12px #000;animation:fade2 2s both}
+@keyframes fade2{from{opacity:0;letter-spacing:1em}}
+</style></head>
+<body><div id="root"></div><script type="module" src="/src/main.tsx"></script></body></html>
